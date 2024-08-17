@@ -5,6 +5,7 @@ import Main from './layouts/Main'
 import Index from './pages/Index'
 import About from './pages/About'
 import Home from './pages/Home'
+import Command from './pages/Command'
 
 
 const router = createBrowserRouter(
@@ -14,6 +15,8 @@ const router = createBrowserRouter(
       <Route index element={<Index />} />
       <Route path='/about' element={<About />} />
       <Route path='/home' element={<Home />} />
+      <Route path='/command' element={<Command />} />
+
 
     
 
