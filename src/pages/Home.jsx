@@ -1,9 +1,12 @@
 import React from 'react'
+import Nav from '../components/Nav'
+import Search from '../components/Search'
 
 const Home = () => {
   return (
-    <div>
-      home
+    <div className='home'>
+      <Nav />
+      <Search />
     </div>
   )
 }
