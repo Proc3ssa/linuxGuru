@@ -14,7 +14,7 @@ const Commands = () => {
       <div className="commands">
         <ul>
           {commandsData.commands.map((command, index) => (
-            <button onClick={handleclick} >{command}</button>
+            <button onClick={handleclick} >{command.name}</button>
           ))}
         </ul>
       </div>

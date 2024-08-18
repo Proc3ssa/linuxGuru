@@ -1,146 +1,1010 @@
 {
-    "commands": [
-      "ls",
-      "cd",
-      "cp",
-      "mv",
-      "rm",
-      "mkdir",
-      "rmdir",
-      "cat",
-      "head",
-      "tail",
-      "find",
-      "grep",
-      "ln",
-      "chmod",
-      "chown",
-      "chgrp",
-      "whoami",
-      "hostname",
-      "top",
-      "df",
-      "free",
-      "date",
-      "uptime",
-      "ps",
-      "kill",
-      "ping",
-      "wget",
-      "curl",
-      "ssh",
-      "scp",
-      "tar",
-      "gzip",
-      "gunzip",
-      "unzip",
-      "zip",
-      "touch",
-      "nano",
-      "vi",
-      "echo",
-      "history",
-      "clear",
-      "pwd",
-      "du",
-      "chmod",
-      "chown",
-      "ifconfig",
-      "ip",
-      "netstat",
-      "traceroute",
-      "dig",
-      "df",
-      "mount",
-      "umount",
-      "apt-get",
-      "yum",
-      "dnf",
-      "pacman",
-      "brew",
-      "systemctl",
-      "service",
-      "journalctl",
-      "htop",
-      "alias",
-      "unalias",
-      "env",
-      "export",
-      "unset",
-      "printenv",
-      "source",
-      "crontab",
-      "at",
-      "batch",
-      "uptime",
-      "who",
-      "w",
-      "id",
-      "groups",
-      "passwd",
-      "su",
-      "sudo",
-      "shutdown",
-      "reboot",
-      "man",
-      "info",
-      "whatis",
-      "apropos",
-      "locate",
-      "updatedb",
-      "df",
-      "du",
-      "stat",
-      "file",
-      "touch",
-      "ln",
-      "chmod",
-      "chown",
-      "chgrp",
-      "umask",
-      "kill",
-      "pkill",
-      "killall",
-      "xargs",
-      "cut",
-      "sort",
-      "uniq",
-      "tr",
-      "awk",
-      "sed",
-      "tee",
-      "head",
-      "tail",
-      "less",
-      "more",
-      "find",
-      "locate",
-      "xargs",
-      "grep",
-      "egrep",
-      "fgrep",
-      "wc",
-      "diff",
-      "cmp",
-      "comm",
-      "cpio",
-      "dd",
-      "mkfs",
-      "fsck",
-      "mount",
-      "umount",
-      "fdisk",
-      "parted",
-      "blkid",
-      "lsblk",
-      "df",
-      "du",
-      "sync",
-      "swapon",
-      "swapoff",
-      "mkswap",
-      "free"
-    ]
+  "commands": [
+    {
+      "name": "ls",
+      "description": "List directory contents.",
+      "examples": [
+        "ls: List files and directories in the current directory.",
+        "ls -l: List files in long format.",
+        "ls -a: List all files, including hidden ones.",
+        "ls -lh: List files in long format with human-readable file sizes.",
+        "ls -R: List files and directories recursively."
+      ]
+    },
+    {
+      "name": "cd",
+      "description": "Change the shell working directory.",
+      "examples": [
+        "cd /path: Change to the specified directory.",
+        "cd ..: Move up one directory level.",
+        "cd ~: Change to the home directory.",
+        "cd -: Switch to the previous directory.",
+        "cd /: Change to the root directory."
+      ]
+    },
+    {
+      "name": "cp",
+      "description": "Copy files and directories.",
+      "examples": [
+        "cp file1.txt /path: Copy file1.txt to the specified path.",
+        "cp -r dir1 /path: Copy the directory dir1 recursively to the specified path.",
+        "cp -i file1.txt /path: Prompt before overwriting.",
+        "cp -u file1.txt /path: Copy only when the source file is newer.",
+        "cp file1.txt file2.txt: Copy file1.txt to file2.txt."
+      ]
+    },
+    {
+      "name": "mv",
+      "description": "Move or rename files and directories.",
+      "examples": [
+        "mv file1.txt /path: Move file1.txt to the specified path.",
+        "mv dir1 /path: Move the directory dir1 to the specified path.",
+        "mv file1.txt file2.txt: Rename file1.txt to file2.txt.",
+        "mv -i file1.txt /path: Prompt before overwriting.",
+        "mv -u file1.txt /path: Move only when the source file is newer."
+      ]
+    },
+    {
+      "name": "rm",
+      "description": "Remove files or directories.",
+      "examples": [
+        "rm file1.txt: Remove the file1.txt.",
+        "rm -r dir1: Remove the directory dir1 and its contents.",
+        "rm -f file1.txt: Force removal without prompt.",
+        "rm -i file1.txt: Prompt before removing.",
+        "rm -v file1.txt: Verbosely display files as they are removed."
+      ]
+    },
+    {
+      "name": "mkdir",
+      "description": "Create directories.",
+      "examples": [
+        "mkdir dir1: Create a new directory named dir1.",
+        "mkdir -p /path/to/dir: Create directories including parent directories as needed.",
+        "mkdir -m 755 dir1: Create a directory with specific permissions.",
+        "mkdir -v dir1: Verbosely display the directories as they are created.",
+        "mkdir --help: Show help information."
+      ]
+    },
+    {
+      "name": "rmdir",
+      "description": "Remove empty directories.",
+      "examples": [
+        "rmdir dir1: Remove the empty directory named dir1.",
+        "rmdir -p /path/to/dir: Remove the directory and its parent directories if empty.",
+        "rmdir --ignore-fail-on-non-empty dir1: Ignore non-empty directory errors.",
+        "rmdir --verbose dir1: Verbosely display the directories as they are removed.",
+        "rmdir --help: Show help information."
+      ]
+    },
+    {
+      "name": "cat",
+      "description": "Concatenate and display file content.",
+      "examples": [
+        "cat file1.txt: Display the content of file1.txt.",
+        "cat file1.txt file2.txt: Concatenate and display the contents of file1.txt and file2.txt.",
+        "cat -n file1.txt: Display line numbers along with the content.",
+        "cat > file1.txt: Redirect input to file1.txt.",
+        "cat >> file1.txt: Append input to file1.txt."
+      ]
+    },
+    {
+      "name": "head",
+      "description": "Display the beginning of a file.",
+      "examples": [
+        "head file1.txt: Show the first 10 lines of file1.txt.",
+        "head -n 5 file1.txt: Show the first 5 lines of file1.txt.",
+        "head -c 100 file1.txt: Show the first 100 bytes of file1.txt.",
+        "head -q file1.txt: Suppress headers when displaying multiple files.",
+        "head --help: Show help information."
+      ]
+    },
+    {
+      "name": "tail",
+      "description": "Display the end of a file.",
+      "examples": [
+        "tail file1.txt: Show the last 10 lines of file1.txt.",
+        "tail -n 5 file1.txt: Show the last 5 lines of file1.txt.",
+        "tail -f file1.txt: Follow the file and display new lines as they are added.",
+        "tail -c 100 file1.txt: Show the last 100 bytes of file1.txt.",
+        "tail -q file1.txt: Suppress headers when displaying multiple files."
+      ]
+    },
+    {
+      "name": "find",
+      "description": "Search for files in a directory hierarchy.",
+      "examples": [
+        "find /path -name 'file.txt': Search for a file by name.",
+        "find /path -type d -name 'dir_name': Search for directories by name.",
+        "find /path -size +100M: Find files larger than 100MB.",
+        "find /path -mtime -7: Find files modified in the last 7 days.",
+        "find /path -exec rm {} \\;: Find files and execute a command on them."
+      ]
+    },
+    {
+      "name": "grep",
+      "description": "Search text using patterns.",
+      "examples": [
+        "grep 'pattern' file1.txt: Search for 'pattern' in file1.txt.",
+        "grep -i 'pattern' file1.txt: Case-insensitive search for 'pattern'.",
+        "grep -r 'pattern' /path: Recursively search for 'pattern' in all files under /path.",
+        "grep -v 'pattern' file1.txt: Invert match, showing lines that do not contain 'pattern'.",
+        "grep -n 'pattern' file1.txt: Show line numbers along with matching lines."
+      ]
+    },
+    {
+      "name": "ln",
+      "description": "Create hard and symbolic links.",
+      "examples": [
+        "ln file1.txt link1.txt: Create a hard link named link1.txt pointing to file1.txt.",
+        "ln -s file1.txt symlink1.txt: Create a symbolic link named symlink1.txt pointing to file1.txt.",
+        "ln -s /path/to/dir symlinkdir: Create a symbolic link to a directory.",
+        "ln -f file1.txt link1.txt: Overwrite the destination link if it already exists.",
+        "ln --help: Show help information."
+      ]
+    },
+    {
+      "name": "chmod",
+      "description": "Change file modes or Access Control Lists.",
+      "examples": [
+        "chmod 755 file1.txt: Set file1.txt to be readable and executable by everyone, writable by the owner.",
+        "chmod u+x file1.txt: Add execute permission for the file owner.",
+        "chmod -R 644 dir1: Recursively set read and write permissions for the owner, read-only for others.",
+        "chmod +x file1.txt: Add execute permission for all users.",
+        "chmod --help: Show help information."
+      ]
+    },
+    {
+      "name": "chown",
+      "description": "Change file owner and group.",
+      "examples": [
+        "chown user file1.txt: Change the owner of file1.txt to 'user'.",
+        "chown user:group file1.txt: Change both owner and group of file1.txt.",
+        "chown -R user:group dir1: Recursively change owner and group for all files in dir1.",
+        "chown --reference=ref_file file1.txt: Change owner and group of file1.txt to match ref_file.",
+        "chown --help: Show help information."
+      ]
+    },
+    {
+      "name": "chgrp",
+      "description": "Change group ownership of files.",
+      "examples": [
+        "chgrp group file1.txt: Change the group of file1.txt to 'group'.",
+        "chgrp -R group dir1: Recursively change the group for all files in dir1.",
+        "chgrp --reference=ref_file file1.txt: Change group of file1.txt to match ref_file.",
+        "chgrp --help: Show help information.",
+        "chgrp -v group file1.txt: Verbosely display the change."
+      ]
+    },
+    {
+      "name": "whoami",
+      "description": "Print the effective username of the current user.",
+      "examples": [
+        "whoami: Display the username of the currently logged-in user.",
+        "whoami --help: Show help information."
+      ]
+    },
+    {
+      "name": "hostname",
+      "description": "Show or set the system's hostname.",
+      "examples": [
+        "hostname: Display the current hostname.",
+        "hostname newname: Set a new hostname.",
+        "hostname -f: Show the fully qualified domain name.",
+        "hostname -i: Display the IP address of the hostname.",
+        "hostnamectl set-hostname newname: Set a new hostname using hostnamectl."
+      ]
+    },
+    {
+      "name": "top",
+      "description": "Display Linux tasks.",
+      "examples": [
+        "top: Display real-time system information including processes.",
+        "top -d 5: Refresh the display every 5 seconds.",
+        "top -p PID: Display information for a specific process ID.",
+        "top -n 1: Show the output only once.",
+        "top -b: Run top in batch mode for logging purposes."
+      ]
+    },
+    {
+      "name": "df",
+      "description": "Report file system disk space usage.",
+      "examples": [
+        "df: Display disk space usage for all mounted file systems.",
+        "df -h: Show disk space usage in human-readable format.",
+        "df -T: Show file system types.",
+        "df -i: Show inode usage.",
+        "df --total: Show a grand total for all file systems."
+      ]
+    },
+    {
+      "name": "free",
+      "description": "Display memory usage.",
+      "examples": [
+        "free: Display total, used, and free memory.",
+        "free -h: Show memory usage in human-readable format.",
+        "free -m: Show memory usage in megabytes.",
+        "free -g: Show memory usage in gigabytes.",
+        "free -s 5: Refresh display every 5 seconds."
+      ]
+    },
+    {
+      "name": "date",
+      "description": "Display or set the system date and time.",
+      "examples": [
+        "date: Display the current date and time.",
+        "date '+%Y-%m-%d %H:%M:%S': Show date and time in a specific format.",
+        "date -s '2024-08-18 12:00:00': Set the system date and time.",
+        "date -u: Display the date and time in UTC.",
+        "date --date='next Fri': Display the date for the next Friday."
+      ]
+    },
+    {
+      "name": "uptime",
+      "description": "Show how long the system has been running.",
+      "examples": [
+        "uptime: Display the system uptime.",
+        "uptime -p: Display uptime in a more human-readable format.",
+        "uptime -s: Show the system start time.",
+        "uptime -V: Show the version of the uptime command."
+      ]
+    },
+    {
+      "name": "ps",
+      "description": "Report a snapshot of current processes.",
+      "examples": [
+        "ps aux: Display detailed information about all running processes.",
+        "ps -ef: Show processes with a full format listing.",
+        "ps -u USER: Display processes for a specific user.",
+        "ps -p PID: Display information about a specific process.",
+        "ps --sort=-%mem: Sort processes by memory usage."
+      ]
+    },
+    {
+      "name": "kill",
+      "description": "Send a signal to a process.",
+      "examples": [
+        "kill PID: Send the default signal (TERM) to a process.",
+        "kill -9 PID: Send the SIGKILL signal to a process.",
+        "kill -l: List all available signals.",
+        "killall process_name: Kill all processes with a specific name.",
+        "kill -15 PID: Send the SIGTERM signal to a process."
+      ]
+    },
+    {
+      "name": "ping",
+      "description": "Send ICMP ECHO_REQUEST to network hosts.",
+      "examples": [
+        "ping example.com: Test connectivity to a host.",
+        "ping -c 4 example.com: Send 4 packets and then stop.",
+        "ping -i 2 example.com: Set the interval between packets to 2 seconds.",
+        "ping -t 10 example.com: Set the TTL (Time To Live) to 10.",
+        "ping -s 64 example.com: Set the packet size to 64 bytes."
+      ]
+    },
+    {
+      "name": "wget",
+      "description": "Retrieve files from the web.",
+      "examples": [
+        "wget http://example.com: Download a file from a URL.",
+        "wget -O file.txt http://example.com: Save the file with a specific name.",
+        "wget -r http://example.com: Download files recursively.",
+        "wget -c http://example.com/file.zip: Continue a download from where it left off.",
+        "wget -q http://example.com: Suppress output and errors."
+      ]
+    },
+    {
+      "name": "curl",
+      "description": "Transfer data from or to a server.",
+      "examples": [
+        "curl http://example.com: Fetch the content of a URL.",
+        "curl -O http://example.com/file.txt: Download a file.",
+        "curl -d 'param=value' http://example.com: Send a POST request.",
+        "curl -I http://example.com: Fetch the HTTP headers of a URL.",
+        "curl -L http://example.com: Follow redirects."
+      ]
+    },
+    {
+      "name": "ssh",
+      "description": "OpenSSH SSH client (remote login program).",
+      "examples": [
+        "ssh user@host: Connect to a remote host as user.",
+        "ssh -i /path/to/key user@host: Use a specific private key for authentication.",
+        "ssh -p 2222 user@host: Connect to a remote host on port 2222.",
+        "ssh -X user@host: Enable X11 forwarding.",
+        "ssh -v user@host: Enable verbose mode for debugging."
+      ]
+    },
+    {
+      "name": "scp",
+      "description": "Secure copy (remote file copy program).",
+      "examples": [
+        "scp file1.txt user@host:/path: Copy file1.txt to a remote host.",
+        "scp -r dir1 user@host:/path: Recursively copy the directory dir1 to a remote host.",
+        "scp -P 2222 file1.txt user@host:/path: Copy file1.txt to a remote host on port 2222.",
+        "scp -i /path/to/key file1.txt user@host:/path: Use a specific private key for authentication.",
+        "scp -v file1.txt user@host:/path: Enable verbose mode for debugging."
+      ]
+    },
+    {
+      "name": "tar",
+      "description": "Manipulate tape archive files.",
+      "examples": [
+        "tar -cvf archive.tar file1.txt: Create a tarball archive of file1.txt.",
+        "tar -xvf archive.tar: Extract files from the archive.",
+        "tar -tf archive.tar: List the contents of the archive.",
+        "tar -czvf archive.tar.gz dir1: Create a compressed tarball archive of dir1.",
+        "tar -xzvf archive.tar.gz: Extract a compressed tarball archive."
+      ]
+    },
+    {
+      "name": "gzip",
+      "description": "Compress files.",
+      "examples": [
+        "gzip file1.txt: Compress file1.txt to file1.txt.gz.",
+        "gzip -d file1.txt.gz: Decompress file1.txt.gz.",
+        "gzip -c file1.txt > file1.txt.gz: Compress file1.txt and write to file1.txt.gz.",
+        "gzip -l file1.txt.gz: List the contents of the compressed file.",
+        "gzip -v file1.txt: Verbosely display the compression progress."
+      ]
+    },
+    {
+      "name": "gunzip",
+      "description": "Decompress files compressed by gzip.",
+      "examples": [
+        "gunzip file1.txt.gz: Decompress file1.txt.gz to file1.txt.",
+        "gunzip -c file1.txt.gz > file1.txt: Decompress to stdout.",
+        "gunzip -d file1.txt.gz: Alternative syntax to decompress.",
+        "gunzip -v file1.txt.gz: Verbosely display the decompression progress.",
+        "gunzip --help: Show help information."
+      ]
+    },
+    {
+      "name": "unzip",
+      "description": "Extract compressed files from a ZIP archive.",
+      "examples": [
+        "unzip archive.zip: Extract files from archive.zip.",
+        "unzip -d /path archive.zip: Extract files to the specified directory.",
+        "unzip -l archive.zip: List the contents of the ZIP archive.",
+        "unzip -o archive.zip: Overwrite existing files without prompting.",
+        "unzip -v archive.zip: Verbosely display the extraction progress."
+      ]
+    },
+    {
+      "name": "zip",
+      "description": "Package and compress files into a ZIP archive.",
+      "examples": [
+        "zip archive.zip file1.txt: Create a ZIP archive containing file1.txt.",
+        "zip -r archive.zip dir1: Recursively add dir1 to the ZIP archive.",
+        "zip -d archive.zip file1.txt: Delete file1.txt from the ZIP archive.",
+        "zip -e archive.zip file1.txt: Encrypt the ZIP archive with a password.",
+        "zip -v archive.zip: Verbosely display the compression progress."
+      ]
+    },
+    {
+      "name": "touch",
+      "description": "Change file timestamps or create empty files.",
+      "examples": [
+        "touch file1.txt: Update the timestamp of file1.txt.",
+        "touch -c file1.txt: Do not create a new file if it does not exist.",
+        "touch -t 202408181200.00 file1.txt: Set the timestamp to a specific date and time.",
+        "touch -a file1.txt: Update the access time only.",
+        "touch -m file1.txt: Update the modification time only."
+      ]
+    },
+    {
+      "name": "nano",
+      "description": "Simple text editor.",
+      "examples": [
+        "nano file1.txt: Open file1.txt in the nano text editor.",
+        "nano -w file1.txt: Disable word wrapping.",
+        "nano -c file1.txt: Display the cursor position.",
+        "nano -B file1.txt: Backup the file before saving.",
+        "nano --help: Show help information."
+      ]
+    },
+    {
+      "name": "vi",
+      "description": "Advanced text editor.",
+      "examples": [
+        "vi file1.txt: Open file1.txt in the vi editor.",
+        "vi +5 file1.txt: Open file1.txt and start at line 5.",
+        "vi -R file1.txt: Open file1.txt in read-only mode.",
+        "vi -b file1.txt: Open file1.txt in binary mode.",
+        "vi --help: Show help information."
+      ]
+    },
+    {
+      "name": "echo",
+      "description": "Display a line of text.",
+      "examples": [
+        "echo 'Hello, world!': Print 'Hello, world!' to the terminal.",
+        "echo -n 'No newline': Print without a trailing newline.",
+        "echo -e 'Line1\nLine2': Enable interpretation of backslash escapes.",
+        "echo $HOME: Display the value of the HOME environment variable.",
+        "echo --help: Show help information."
+      ]
+    },
+    {
+      "name": "history",
+      "description": "Display or manipulate the command history.",
+      "examples": [
+        "history: Show the command history list.",
+        "history -c: Clear the history list.",
+        "history -w: Write the current history to the history file.",
+        "history -r: Read the history from the history file.",
+        "history | grep 'command': Search for 'command' in the history."
+      ]
+    },
+    {
+      "name": "clear",
+      "description": "Clear the terminal screen.",
+      "examples": [
+        "clear: Clear the terminal screen.",
+        "clear --help: Show help information."
+      ]
+    },
+    {
+      "name": "pwd",
+      "description": "Print the current working directory.",
+      "examples": [
+        "pwd: Display the full path of the current directory.",
+        "pwd -L: Print the logical current directory (symlinks resolved).",
+        "pwd -P: Print the physical current directory (symlinks not resolved).",
+        "pwd --help: Show help information."
+      ]
+    },
+    {
+      "name": "du",
+      "description": "Estimate file space usage.",
+      "examples": [
+        "du: Display the disk usage of the current directory.",
+        "du -h: Display the disk usage in human-readable format.",
+        "du -s: Display the total disk usage of the directory.",
+        "du -a: Display disk usage of all files and directories.",
+        "du --max-depth=1: Show disk usage for directories at depth 1."
+      ]
+    },
+    {
+      "name": "ifconfig",
+      "description": "Configure network interfaces.",
+      "examples": [
+        "ifconfig: Display information about all network interfaces.",
+        "ifconfig eth0: Display information about the eth0 interface.",
+        "ifconfig eth0 up: Bring the eth0 interface up.",
+        "ifconfig eth0 down: Bring the eth0 interface down.",
+        "ifconfig eth0 192.168.1.10 netmask 255.255.255.0: Assign an IP address to eth0."
+      ]
+    },
+    {
+      "name": "ip",
+      "description": "Show/manipulate routing, devices, policy routing and tunnels.",
+      "examples": [
+        "ip addr show: Display IP addresses for all interfaces.",
+        "ip link set eth0 up: Bring the eth0 interface up.",
+        "ip route show: Display the routing table.",
+        "ip addr add 192.168.1.10/24 dev eth0: Assign an IP address to eth0.",
+        "ip link set eth0 down: Bring the eth0 interface down."
+      ]
+    },
+    {
+      "name": "netstat",
+      "description": "Print network connections, routing tables, interface statistics, masquerade connections, and multicast memberships.",
+      "examples": [
+        "netstat: Display network connections.",
+        "netstat -a: Display all network connections and listening ports.",
+        "netstat -tuln: Display listening ports and their associated processes.",
+        "netstat -r: Display the routing table.",
+        "netstat -i: Display network interfaces and their statistics."
+      ]
+    },
+    {
+      "name": "traceroute",
+      "description": "Print the route packets take to the network host.",
+      "examples": [
+        "traceroute example.com: Trace the route to example.com.",
+        "traceroute -m 30 example.com: Set the maximum number of hops to 30.",
+        "traceroute -p 80 example.com: Use port 80 for tracing.",
+        "traceroute -n example.com: Show IP addresses instead of hostnames.",
+        "traceroute --help: Show help information."
+      ]
+    },
+    {
+      "name": "dig",
+      "description": "DNS lookup utility.",
+      "examples": [
+        "dig example.com: Perform a DNS lookup for example.com.",
+        "dig @8.8.8.8 example.com: Query DNS server at 8.8.8.8 for example.com.",
+        "dig +short example.com: Show only the answer to the query.",
+        "dig -x 8.8.8.8: Perform a reverse DNS lookup.",
+        "dig -t MX example.com: Query mail exchange records for example.com."
+      ]
+    },
+    {
+      "name": "mount",
+      "description": "Mount a filesystem.",
+      "examples": [
+        "mount /dev/sdX1 /mnt: Mount the filesystem on /dev/sdX1 to /mnt.",
+        "mount -t ext4 /dev/sdX1 /mnt: Specify the filesystem type.",
+        "mount -o ro /dev/sdX1 /mnt: Mount read-only.",
+        "mount -a: Mount all filesystems listed in /etc/fstab.",
+        "mount --help: Show help information."
+      ]
+    },
+    {
+      "name": "umount",
+      "description": "Unmount a filesystem.",
+      "examples": [
+        "umount /mnt: Unmount the filesystem mounted at /mnt.",
+        "umount -l /mnt: Perform a lazy unmount.",
+        "umount -f /mnt: Force the unmount.",
+        "umount --all: Unmount all filesystems mentioned in /etc/mtab.",
+        "umount --help: Show help information."
+      ]
+    },
+    {
+      "name": "apt-get",
+      "description": "APT package handling utility (Debian-based systems).",
+      "examples": [
+        "apt-get update: Update the package index.",
+        "apt-get upgrade: Upgrade all installed packages.",
+        "apt-get install package: Install a new package.",
+        "apt-get remove package: Remove a package.",
+        "apt-get autoremove: Remove unnecessary packages."
+      ]
+    },
+    {
+      "name": "yum",
+      "description": "Package manager for RPM-based distributions.",
+      "examples": [
+        "yum update: Update all packages to the latest version.",
+        "yum install package: Install a new package.",
+        "yum remove package: Remove a package.",
+        "yum search keyword: Search for packages matching keyword.",
+        "yum list installed: List all installed packages."
+      ]
+    },
+    {
+      "name": "dnf",
+      "description": "Next-generation package manager for RPM-based distributions.",
+      "examples": [
+        "dnf update: Update all packages to the latest version.",
+        "dnf install package: Install a new package.",
+        "dnf remove package: Remove a package.",
+        "dnf search keyword: Search for packages matching keyword.",
+        "dnf list installed: List all installed packages."
+      ]
+    },
+    {
+      "name": "pacman",
+      "description": "Package manager for Arch Linux.",
+      "examples": [
+        "pacman -Syu: Update all packages and the system.",
+        "pacman -S package: Install a new package.",
+        "pacman -R package: Remove a package.",
+        "pacman -Ss keyword: Search for packages matching keyword.",
+        "pacman -Q: List all installed packages."
+      ]
+    },
+    {
+      "name": "brew",
+      "description": "Package manager for macOS (Homebrew).",
+      "examples": [
+        "brew update: Update Homebrew to the latest version.",
+        "brew install package: Install a new package.",
+        "brew uninstall package: Remove a package.",
+        "brew search keyword: Search for packages matching keyword.",
+        "brew list: List all installed packages."
+      ]
+    },
+    {
+      "name": "systemctl",
+      "description": "Control the systemd system and service manager.",
+      "examples": [
+        "systemctl start service_name: Start a service.",
+        "systemctl stop service_name: Stop a service.",
+        "systemctl restart service_name: Restart a service.",
+        "systemctl status service_name: Show the status of a service.",
+        "systemctl enable service_name: Enable a service to start on boot."
+      ]
+    },
+    {
+      "name": "journalctl",
+      "description": "Query and display messages from the journal (systemd).",
+      "examples": [
+        "journalctl: Display all messages from the journal.",
+        "journalctl -u service_name: Show messages for a specific service.",
+        "journalctl -f: Follow new journal entries in real-time.",
+        "journalctl --since '1 hour ago': Show entries from the last hour.",
+        "journalctl -p err: Show only error messages."
+      ]
+    },
+    {
+      "name": "crontab",
+      "description": "Schedule periodic tasks.",
+      "examples": [
+        "crontab -e: Edit the crontab file for the current user.",
+        "crontab -l: List the current user's crontab.",
+        "crontab -r: Remove the current user's crontab.",
+        "crontab -u user -e: Edit the crontab for a specific user.",
+        "crontab -u user -l: List the crontab for a specific user."
+      ]
+    },
+    {
+      "name": "at",
+      "description": "Schedule tasks to be run at a specific time.",
+      "examples": [
+        "at now + 5 minutes: Run a command in 5 minutes.",
+        "at 12:00: Run a command at noon.",
+        "at -f script.sh now + 1 hour: Run a script in 1 hour.",
+        "atq: List scheduled jobs.",
+        "atrm job_number: Remove a scheduled job."
+      ]
+    },
+    {
+      "name": "shutdown",
+      "description": "Shutdown or restart the system.",
+      "examples": [
+        "shutdown now: Shut down the system immediately.",
+        "shutdown -r now: Restart the system immediately.",
+        "shutdown -h +10: Shut down the system in 10 minutes.",
+        "shutdown -c: Cancel a pending shutdown.",
+        "shutdown --help: Show help information."
+      ]
+    },
+    {
+      "name": "reboot",
+      "description": "Reboot the system.",
+      "examples": [
+        "reboot: Restart the system immediately.",
+        "reboot -f: Force reboot the system.",
+        "reboot --help: Show help information."
+      ]
+    },
+    {
+      "name": "hostname",
+      "description": "Show or set the system’s hostname.",
+      "examples": [
+        "hostname: Display the current hostname.",
+        "hostname newname: Set the system's hostname to newname.",
+        "hostname -f: Display the fully qualified domain name (FQDN).",
+        "hostname -i: Display the IP address of the hostname.",
+        "hostname --help: Show help information."
+      ]
+    },
+    {
+      "name": "top",
+      "description": "Display dynamic real-time information about processes.",
+      "examples": [
+        "top: Show the top processes by CPU usage.",
+        "top -u user: Show processes for a specific user.",
+        "top -d 5: Refresh the display every 5 seconds.",
+        "top -b: Run in batch mode for use with other programs.",
+        "top --help: Show help information."
+      ]
+    },
+    {
+      "name": "df",
+      "description": "Display information about disk space usage.",
+      "examples": [
+        "df: Display disk space usage for all filesystems.",
+        "df -h: Show disk space usage in human-readable format.",
+        "df -T: Show the filesystem type along with space usage.",
+        "df -i: Display inode usage.",
+        "df --help: Show help information."
+      ]
+    },
+    {
+      "name": "free",
+      "description": "Display information about free and used memory.",
+      "examples": [
+        "free: Show memory usage in kilobytes.",
+        "free -h: Show memory usage in human-readable format.",
+        "free -m: Show memory usage in megabytes.",
+        "free -g: Show memory usage in gigabytes.",
+        "free --help: Show help information."
+      ]
+    },
+    {
+      "name": "date",
+      "description": "Display or set the system date and time.",
+      "examples": [
+        "date: Display the current date and time.",
+        "date '+%Y-%m-%d %H:%M:%S': Display the date and time in a custom format.",
+        "date -u: Display the date and time in UTC.",
+        "date -s '2024-08-18 12:00:00': Set the system date and time.",
+        "date --help: Show help information."
+      ]
+    },
+    {
+      "name": "uptime",
+      "description": "Show how long the system has been running.",
+      "examples": [
+        "uptime: Display the system uptime along with load averages.",
+        "uptime -p: Display the uptime in a more human-readable format.",
+        "uptime -s: Display the start time of the system.",
+        "uptime --help: Show help information."
+      ]
+    },
+    {
+      "name": "ps",
+      "description": "Report a snapshot of current processes.",
+      "examples": [
+        "ps: Display a snapshot of current processes.",
+        "ps -e: Show all processes.",
+        "ps -ef: Show all processes with full-format listing.",
+        "ps aux: Display all processes with detailed information.",
+        "ps --help: Show help information."
+      ]
+    },
+    {
+      "name": "kill",
+      "description": "Send a signal to a process, typically to terminate it.",
+      "examples": [
+        "kill PID: Send the default TERM signal to the process with the specified PID.",
+        "kill -9 PID: Forcefully kill the process with the specified PID.",
+        "killall process_name: Kill all processes with the specified name.",
+        "kill -l: List all available signals.",
+        "kill --help: Show help information."
+      ]
+    },
+    {
+      "name": "ping",
+      "description": "Send ICMP ECHO_REQUEST to network hosts.",
+      "examples": [
+        "ping example.com: Send ping requests to example.com.",
+        "ping -c 4 example.com: Send 4 ping requests and then stop.",
+        "ping -i 2 example.com: Send ping requests every 2 seconds.",
+        "ping -t 10 example.com: Set the timeout to 10 seconds.",
+        "ping --help: Show help information."
+      ]
+    },
+    {
+      "name": "wget",
+      "description": "Non-interactive network downloader.",
+      "examples": [
+        "wget http://example.com/file.txt: Download file.txt from example.com.",
+        "wget -O file.txt http://example.com/file.txt: Save the download as file.txt.",
+        "wget -r http://example.com: Download files recursively from example.com.",
+        "wget --limit-rate=200k http://example.com/file.txt: Limit download speed to 200KB/s.",
+        "wget --help: Show help information."
+      ]
+    },
+    {
+      "name": "curl",
+      "description": "Transfer data from or to a server.",
+      "examples": [
+        "curl http://example.com: Fetch the contents of example.com.",
+        "curl -O http://example.com/file.txt: Download file.txt from example.com.",
+        "curl -I http://example.com: Fetch HTTP headers from example.com.",
+        "curl -d 'param=value' http://example.com: Send data to example.com using POST.",
+        "curl --help: Show help information."
+      ]
+    },
+    {
+      "name": "ssh",
+      "description": "OpenSSH SSH client (remote login program).",
+      "examples": [
+        "ssh user@host: Connect to host as user using SSH.",
+        "ssh -p 2222 user@host: Connect to host using port 2222.",
+        "ssh -i keyfile user@host: Use a specific keyfile for authentication.",
+        "ssh -L local_port:remote_host:remote_port user@host: Set up port forwarding.",
+        "ssh --help: Show help information."
+      ]
+    },
+    {
+      "name": "scp",
+      "description": "Secure copy (remote file copy program).",
+      "examples": [
+        "scp file.txt user@host:/path: Copy file.txt to /path on host.",
+        "scp -r dir user@host:/path: Recursively copy directory dir to /path on host.",
+        "scp -P 2222 file.txt user@host:/path: Use port 2222 for the connection.",
+        "scp -i keyfile file.txt user@host:/path: Use a specific keyfile for authentication.",
+        "scp --help: Show help information."
+      ]
+    },
+    {
+      "name": "tar",
+      "description": "Archive files.",
+      "examples": [
+        "tar -cvf archive.tar file1.txt: Create an archive archive.tar containing file1.txt.",
+        "tar -xvf archive.tar: Extract files from archive.tar.",
+        "tar -cvzf archive.tar.gz dir/: Create a compressed archive of dir/ in gzip format.",
+        "tar -tvf archive.tar: List the contents of archive.tar.",
+        "tar --help: Show help information."
+      ]
+    },
+    {
+      "name": "gzip",
+      "description": "Compress files using the gzip algorithm.",
+      "examples": [
+        "gzip file.txt: Compress file.txt to file.txt.gz.",
+        "gzip -d file.txt.gz: Decompress file.txt.gz to file.txt.",
+        "gzip -c file.txt > file.txt.gz: Compress and write to file.txt.gz without deleting the original.",
+        "gzip -l file.txt.gz: List information about the compressed file.",
+        "gzip --help: Show help information."
+      ]
+    },
+    {
+      "name": "gunzip",
+      "description": "Decompress files compressed by gzip.",
+      "examples": [
+        "gunzip file.txt.gz: Decompress file.txt.gz to file.txt.",
+        "gunzip -c file.txt.gz > file.txt: Decompress and write to file.txt without deleting the original.",
+        "gunzip -l file.txt.gz: List information about the compressed file.",
+        "gunzip --help: Show help information."
+      ]
+    },
+    {
+      "name": "unzip",
+      "description": "Extract compressed files from a ZIP archive.",
+      "examples": [
+        "unzip archive.zip: Extract all files from archive.zip.",
+        "unzip -d /path archive.zip: Extract files to the specified directory /path.",
+        "unzip -l archive.zip: List the contents of archive.zip without extracting.",
+        "unzip -o archive.zip: Overwrite existing files without prompting.",
+        "unzip --help: Show help information."
+      ]
+    },
+    {
+      "name": "zip",
+      "description": "Package and compress files into a ZIP archive.",
+      "examples": [
+        "zip archive.zip file1.txt: Create archive.zip containing file1.txt.",
+        "zip -r archive.zip dir/: Recursively zip the contents of dir/.",
+        "zip -e archive.zip file1.txt: Create an encrypted ZIP file.",
+        "zip -d archive.zip file1.txt: Remove file1.txt from the ZIP archive.",
+        "zip --help: Show help information."
+      ]
+    },
+    {
+      "name": "touch",
+      "description": "Change file timestamps or create new files.",
+      "examples": [
+        "touch file1.txt: Update the access and modification times of file1.txt.",
+        "touch -c file1.txt: Do not create file1.txt if it does not exist.",
+        "touch -t 202408181200 file1.txt: Set the timestamp to a specific date and time.",
+        "touch -a file1.txt: Update only the access time.",
+        "touch --help: Show help information."
+      ]
+    },
+    {
+      "name": "nano",
+      "description": "Simple text editor for the command line.",
+      "examples": [
+        "nano file1.txt: Edit file1.txt using nano.",
+        "nano -w file1.txt: Disable line wrapping.",
+        "nano -c file1.txt: Show cursor position in the editor.",
+        "nano --help: Show help information.",
+        "nano -B file1.txt: Create a backup of file1.txt before saving."
+      ]
+    },
+    {
+      "name": "vi",
+      "description": "Text editor available on most Unix systems.",
+      "examples": [
+        "vi file1.txt: Edit file1.txt using vi.",
+        "vi -R file1.txt: Open file1.txt in read-only mode.",
+        "vi +10 file1.txt: Open file1.txt and go to line 10.",
+        "vi --version: Display the version of vi.",
+        "vi --help: Show help information."
+      ]
+    },
+    {
+      "name": "echo",
+      "description": "Display a line of text or a variable value.",
+      "examples": [
+        "echo 'Hello, World!': Print 'Hello, World!' to the terminal.",
+        "echo $HOME: Print the value of the HOME environment variable.",
+        "echo -n 'Hello': Print 'Hello' without a newline.",
+        "echo -e 'Line1\nLine2': Enable interpretation of backslash escapes.",
+        "echo --help: Show help information."
+      ]
+    },
+    {
+      "name": "history",
+      "description": "Display the command history.",
+      "examples": [
+        "history: Show the command history.",
+        "history | grep 'command': Search the command history for 'command'.",
+        "history -c: Clear the command history.",
+        "history -d offset: Delete the command at the specified offset.",
+        "history --help: Show help information."
+      ]
+    },
+    {
+      "name": "clear",
+      "description": "Clear the terminal screen.",
+      "examples": [
+        "clear: Clear the terminal screen.",
+        "clear --help: Show help information."
+      ]
+    },
+    {
+      "name": "pwd",
+      "description": "Print the current working directory.",
+      "examples": [
+        "pwd: Display the path of the current working directory.",
+        "pwd -L: Print the logical path (following symbolic links).",
+        "pwd -P: Print the physical path (resolving symbolic links).",
+        "pwd --help: Show help information."
+      ]
+    },
+    {
+      "name": "du",
+      "description": "Estimate file space usage.",
+      "examples": [
+        "du: Display the disk usage of the current directory.",
+        "du -h: Show disk usage in human-readable format.",
+        "du -s /path: Show the total disk usage of /path.",
+        "du -a: Display disk usage for all files and directories.",
+        "du --help: Show help information."
+      ]
+    },
+    {
+      "name": "ifconfig",
+      "description": "Configure network interfaces.",
+      "examples": [
+        "ifconfig: Display information about all network interfaces.",
+        "ifconfig eth0: Show information about the eth0 interface.",
+        "ifconfig eth0 up: Activate the eth0 interface.",
+        "ifconfig eth0 down: Deactivate the eth0 interface.",
+        "ifconfig --help: Show help information."
+      ]
+    },
+    {
+      "name": "ip",
+      "description": "Show/manipulate routing, devices, policy routing, and tunnels.",
+      "examples": [
+        "ip addr: Display all IP addresses and network interfaces.",
+        "ip link set eth0 up: Bring up the eth0 interface.",
+        "ip route: Display the routing table.",
+        "ip a add 192.168.1.1/24 dev eth0: Add an IP address to eth0.",
+        "ip --help: Show help information."
+      ]
+    },
+    {
+      "name": "netstat",
+      "description": "Print network connections, routing tables, interface statistics, masquerade connections, and multicast memberships.",
+      "examples": [
+        "netstat: Display a list of network connections.",
+        "netstat -t: Show TCP connections.",
+        "netstat -u: Show UDP connections.",
+        "netstat -r: Show the routing table.",
+        "netstat --help: Show help information."
+      ]
+    },
+    {
+      "name": "traceroute",
+      "description": "Print the route packets take to the network host.",
+      "examples": [
+        "traceroute example.com: Trace the route to example.com.",
+        "traceroute -m 20 example.com: Set the maximum number of hops to 20.",
+        "traceroute -n example.com: Show IP addresses only, no domain names.",
+        "traceroute --help: Show help information."
+      ]
+    },
+    {
+      "name": "dig",
+      "description": "DNS lookup tool.",
+      "examples": [
+        "dig example.com: Perform a DNS lookup for example.com.",
+        "dig @8.8.8.8 example.com: Query a specific DNS server.",
+        "dig -x 8.8.8.8: Perform a reverse DNS lookup.",
+        "dig +short example.com: Show a short format of the DNS response.",
+        "dig --help: Show help information."
+      ]
+    },
+    {
+      "name": "mount",
+      "description": "Mount a filesystem.",
+      "examples": [
+        "mount /dev/sdX1 /mnt: Mount the device /dev/sdX1 to /mnt.",
+        "mount -t ext4 /dev/sdX1 /mnt: Specify the filesystem type (e.g., ext4).",
+        "mount -o ro /dev/sdX1 /mnt: Mount the device as read-only.",
+        "mount -a: Mount all filesystems mentioned in /etc/fstab.",
+        "mount --help: Show help information."
+      ]
+    }
+  ]
 }
-
-  
