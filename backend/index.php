@@ -10,13 +10,23 @@ if($_SERVER['REQUEST_METHOD']){
 
     $id = $_GET['id'];
 
-    $SELECT = "SELECT *FROM commands WHERE name = $id";
+    $SELECT = "SELECT *FROM commands WHERE name = '$id'";
     $QUERY = mysqli_query($connection, $SELECT);
-    $RES = mysqli_fetch_assoc($QUERY);
+
+    if($QUERY -> num_rows != 0){
+        $RES = mysqli_fetch_assoc($QUERY);
+        echo json_encode(['status' => true, 'data' => $RES]);
+    }
+    else{
+        echo json_encode(['status' => false, 'data' => 'commad not found']);
+    }
+    
+
+    
 
 }
 else{
-    echo json_encode(['success' => false, 'message' => 'Wrong request method'])
+    echo json_encode(['success' => false, 'message' => 'Wrong request method']);
 }
 
 ?>
