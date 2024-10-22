@@ -1,10 +1,13 @@
 import React from 'react';
 import commandsData from './commands.json'; 
+import { useNavigate } from 'react-router-dom';
 const Commands = () => {
-
+const navigate = useNavigate();
   function handleclick(e){
     const command = e.target.textContent
-    window.location.href = `/command?cmd=${command}`
+
+    navigate(`/command`, { state: { cmd: command } });
+    // window.location.href = `/command?cmd=${command}`
   }
 
   return (

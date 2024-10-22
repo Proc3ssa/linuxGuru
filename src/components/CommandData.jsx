@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from 'react';
-
+import { useLocation } from 'react-router-dom';
 const url = new URL (window.location.href);
 const params = new URLSearchParams(url.search);
 const command = params.get('cmd');
 
 const CommandData = () => {
-
+  
+    const location = useLocation();
+    const command = location.state?.cmd || 'Command'; // Fallback if no command is passed
+  
   const [data, setData] = useState({});
   const [error, setError] = useState(false);
 
