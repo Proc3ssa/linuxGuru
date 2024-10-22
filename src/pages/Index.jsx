@@ -1,11 +1,14 @@
 import React, {useEffect} from 'react'
+import { useNavigate } from 'react-router-dom'
 import { DNA } from 'react-loader-spinner'
 import logo from '../assets/images/logo.png'
 
 const Index = () => {
+
+  const navigate = useNavigate();
  useEffect(()=>{
     setTimeout(()=>{
-      window.location.href = "/home"
+      navigate('/home');
     }, 2000)
  },[])
 
