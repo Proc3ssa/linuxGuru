@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
+import { FaGithub, FaX } from 'react-icons/fa6';
 const url = new URL (window.location.href);
 const params = new URLSearchParams(url.search);
 const command = params.get('cmd');
@@ -83,6 +84,9 @@ const CommandData = () => {
               }
            
           </div>
+          <p style={{color:"white"}}>Let's connect</p>
+          <p><a href="https://github.com/Proc3ssa"><FaGithub /></a>--
+          <a href="https://x.com/processor_911"><FaX /></a></p>
         </div>
       );
     
