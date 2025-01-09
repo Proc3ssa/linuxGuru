@@ -56,6 +56,9 @@ a:hover{
   
   
 }
+.results{
+ color:white;
+}
 
 .commands{
   display: flex;
@@ -94,7 +97,7 @@ a:hover{
 
 .search input:hover{
   width: 410px;
-  height: 45px;
+  transition: 0.2s;
 }
 
 .command{
@@ -146,6 +149,12 @@ a:hover{
 code{
   border-radius: 4px;
   background-color: rgb(221, 218, 218);
+}
+.results{
+  height: fit-content;
+  margin: 20px auto 30px;
+  width: fit-content;
+  
 }
 
 @media screen and (max-width: 412px) {
