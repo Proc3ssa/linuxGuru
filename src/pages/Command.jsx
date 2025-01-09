@@ -1,22 +1,17 @@
 import React from 'react'
 import CommandData from '../components/CommandData'
+import { useParams } from 'react-router-dom';
 
 const Command = () => {
-   
-const queryString = window.location.search;
+   const {commandname} = useParams();
 
-
-const urlParams = new URLSearchParams(queryString);
-
-
-const cmd = urlParams.get('cmd');
 
 
 
   return (
     <div className='command'>
         
-      <CommandData command={cmd}/>
+      <CommandData commandname={commandname}/>
     </div>
   )
 }

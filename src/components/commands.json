@@ -1,5 +1,5 @@
-{
-  "commands": [
+
+  [
     {
       "name": "ls",
       "description": "List directory contents.",
@@ -1007,4 +1007,4 @@
       ]
     }
   ]
-}
+

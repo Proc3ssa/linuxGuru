@@ -15,7 +15,7 @@ const router = createBrowserRouter(
       <Route index element={<Index />} />
       <Route path='/about' element={<About />} />
       <Route path='/home' element={<Home />} />
-      <Route path='/command' element={<Command />} />
+      <Route path='/command/:commandname' element={<Command />} />
 
 
     

@@ -1,14 +1,9 @@
 import React from 'react';
-import commandsData from './commands.json'; 
-import { useNavigate } from 'react-router-dom';
+import commands from './commands.json'; 
+import {Link} from 'react-router-dom';
 const Commands = () => {
-const navigate = useNavigate();
-  function handleclick(e){
-    const command = e.target.textContent
 
-    navigate(`/command`, { state: { cmd: command } });
-    // window.location.href = `/command?cmd=${command}`
-  }
+  console.log(commands);
 
   return (
     <div className='command'>
@@ -16,8 +11,8 @@ const navigate = useNavigate();
       
       <div className="commands">
         <ul>
-          {commandsData.commands.map((command, index) => (
-            <button onClick={handleclick} >{command.name}</button>
+          {commands.map((command, index) => (
+           <Link to={`/command/${command.name}`}> <button>{command.name}</button></Link>
           ))}
         </ul>
       </div>
